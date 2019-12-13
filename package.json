@@ -1,0 +1,35 @@
+{
+  "name": "t-value",
+  "version": "0.0.1",
+  "description": "Typescript value",
+  "dependencies": {
+    "@types/node": "^12.12.11",
+    "dist-mover": "git+https://github.com/dikac/dist-mover.git",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^3.7.2"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^3.5.0",
+    "jasmine": "^3.4.0"
+  },
+  "scripts": {
+    "spec-run": "jasmine --config=./jasmine.json",
+    "spec": "npm-run-all spec-compile spec-run",
+    "spec-compile": "npm-run-all --parallel spec-compile-script ",
+    "spec-compile-watch": "npm-run-all --parallel spec-compile-watch-script",
+    "spec-compile-script": "tsc -p tsconfig-spec.json",
+    "spec-compile-watch-script": "tsc -w -p tsconfig-spec.json",
+    "compile": "tsc",
+    "compile-watch": "tsc -w",
+    "postinstall": "npm run production",
+    "production": "dist-mover"
+  },
+  "files": [
+    "tsconfig.json",
+    "dist/",
+    "LICENSE",
+    "Readme.md"
+  ],
+  "author": "",
+  "license": "MIT"
+}
