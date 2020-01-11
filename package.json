@@ -1,12 +1,12 @@
 {
-  "name": "t-value",
-  "version": "0.0.1",
+  "name": "@dikac/t-value",
+  "version": "0.2.0",
   "description": "Typescript value",
   "dependencies": {
-    "@types/node": "^12.12.11",
-    "dist-mover": "git+https://github.com/dikac/dist-mover.git",
+    "@dikac/deployer": "^0.1.2",
+    "@types/node": "^12.12.24",
     "npm-run-all": "^4.1.5",
-    "typescript": "^3.7.2"
+    "typescript": "^3.7.4"
   },
   "devDependencies": {
     "@types/jasmine": "^3.5.0",
@@ -21,11 +21,10 @@
     "spec-compile-watch-script": "tsc -w -p tsconfig-spec.json",
     "compile": "tsc",
     "compile-watch": "tsc -w",
-    "postinstall": "npm run production",
-    "production": "dist-mover"
+    "postinstall": "npm-run-all deploy",
+    "deploy": "deployer /.git /dist /"
   },
   "files": [
-    "tsconfig.json",
     "dist/",
     "LICENSE",
     "Readme.md"
