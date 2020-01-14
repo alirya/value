@@ -1,6 +1,6 @@
 {
   "name": "@dikac/t-value",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Typescript value",
   "dependencies": {
     "@dikac/deployer": "^0.1.2",
@@ -21,7 +21,7 @@
     "spec-compile-watch-script": "tsc -w -p tsconfig-spec.json",
     "compile": "tsc",
     "compile-watch": "tsc -w",
-    "postinstall": "npm-run-all deploy",
+    "postinstall": "npm run deploy",
     "deploy": "deployer /.git /dist /"
   },
   "files": [
