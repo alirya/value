@@ -9,11 +9,9 @@
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    class Readonly {
-        constructor(value) {
-            this.value = value;
-        }
+    function Value(type) {
+        return `value expect '${type}'`;
     }
-    exports.default = Readonly;
+    exports.default = Value;
 });
-//# sourceMappingURL=readonly.js.map
+//# sourceMappingURL=value.js.map

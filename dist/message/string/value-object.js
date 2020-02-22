@@ -4,16 +4,15 @@
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports"], factory);
+        define(["require", "exports", "./value"], factory);
     }
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    class Readonly {
-        constructor(value) {
-            this.value = value;
-        }
+    const value_1 = require("./value");
+    function ValueObject(data) {
+        return value_1.default(data.type);
     }
-    exports.default = Readonly;
+    exports.default = ValueObject;
 });
-//# sourceMappingURL=readonly.js.map
+//# sourceMappingURL=value-object.js.map

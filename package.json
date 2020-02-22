@@ -2,7 +2,9 @@
   "name": "@dikac/t-value",
   "version": "0.4.2",
   "description": "Typescript value",
-  "dependencies": {},
+  "dependencies": {
+    "@dikac/t-validatable": "git+file:///b:/t-validatable"
+  },
   "devDependencies": {
     "@dikac/deployer": "^0.1.2",
     "jasmine": "^3.4.0",
