@@ -1,6 +1,6 @@
 {
   "name": "@dikac/t-value",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Typescript value",
   "dependencies": {
     "@dikac/t-message": "^0.3.0",

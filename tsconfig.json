@@ -12,6 +12,7 @@
     "incremental": true,
     "tsBuildInfoFile": "./dist/compiler-cache",
     "strictPropertyInitialization": true,
+    "rootDir" : "src",
     "lib": [
       "es2016",
       "es2015",
