@@ -1,6 +1,6 @@
-import Value from "./value";
-export default class Wrapper<Data, Container extends Value<Data>> implements Readonly<Value<Data>> {
+import Value, { Infer } from "./value";
+export default class Wrapper<Container extends Value = Value> implements Readonly<Value<Infer<Container>>> {
     valueContainer: Container;
     constructor(valueContainer: Container);
-    get value(): Data;
+    get value(): Infer<Container>;
 }
