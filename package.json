@@ -3,11 +3,11 @@
   "version": "0.6.0",
   "description": "Typescript value",
   "dependencies": {
+    "@dikac/deployer": "^0.1.5",
     "@dikac/t-message": "^0.3.0",
     "@dikac/t-validatable": "^0.9.0"
   },
   "devDependencies": {
-    "@dikac/deployer": "^0.1.2",
     "jasmine": "^3.4.0",
     "move-cli": "^1.2.1",
     "cpy-cli": "^3.0.0",
@@ -30,7 +30,9 @@
     "release": "remove-json-properties dist/package.json private",
     "postrelease": "npm publish dist",
     "prerelease": "cpy     package.json package-lock.json LICENSE Readme.md .npmignore dist",
-    "postpublish": "rimraf package.json package-lock.json LICENSE Readme.md .npmignore"
+    "postpublish": "rimraf package.json package-lock.json LICENSE Readme.md .npmignore",
+    "postinstall": "npm run deploy",
+    "deploy": "deployer /.git /dist /"
   },
   "author": "",
   "private": true,
