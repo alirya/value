@@ -3,14 +3,14 @@ import Value, {Infer} from "./value";
 export default class Wrapper<Container extends Value = Value> implements Readonly<Value<Infer<Container>>> {
 
     constructor(
-        public valueContainer : Container
+        public subject : Container
     ){
 
     }
 
     get value() : Infer<Container> {
 
-        return this.valueContainer.value;
+        return <Infer<Container>> this.subject.value;
     }
 }
 

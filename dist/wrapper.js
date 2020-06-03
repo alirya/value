@@ -10,11 +10,11 @@
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     class Wrapper {
-        constructor(valueContainer) {
-            this.valueContainer = valueContainer;
+        constructor(subject) {
+            this.subject = subject;
         }
         get value() {
-            return this.valueContainer.value;
+            return this.subject.value;
         }
     }
     exports.default = Wrapper;
