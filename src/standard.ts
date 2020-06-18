@@ -1,8 +1,7 @@
 import Value from "./value";
 
-export default class Standard<V> implements Value<V> {
 
-    constructor(
-        public value : V
-    ){}
+export default function Standard<V>(value : V) : Value<V>  {
+
+    return {value:value};
 }

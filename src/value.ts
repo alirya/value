@@ -4,5 +4,4 @@ export default interface Value<Value = unknown> {
 }
 
 
-export type Infer<Data> = Data extends Value<infer As> ? As : never;
 
