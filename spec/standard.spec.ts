@@ -5,14 +5,14 @@ it("force console log", () => spyOn(console, 'log').and.callThrough());
 
 describe("constructor", function() {
 
-    let standard = new Standard(1);
+    let standard = Standard(1);
 
     it(`number`, () => expect(standard.value).toBe(1));
 });
 
 describe("set", function() {
 
-    let standard = new Standard(1);
+    let standard = Standard(1);
     standard.value = 10;
 
     it(`number`, () => expect(standard.value).toBe(10));
@@ -23,7 +23,7 @@ describe("compiler compatible", function() {
 
     describe("number", function() {
 
-        let standard = new Standard(1);
+        let standard = Standard(1);
 
         function accept(value : number) {
 
@@ -36,7 +36,7 @@ describe("compiler compatible", function() {
 
     describe("string", function() {
 
-        let standard = new Standard('string');
+        let standard = Standard('string');
 
         function accept(value : string) {
 

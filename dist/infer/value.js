@@ -9,9 +9,5 @@
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    function Standard(value) {
-        return { value: value };
-    }
-    exports.default = Standard;
 });
-//# sourceMappingURL=standard.js.map
+//# sourceMappingURL=value.js.map

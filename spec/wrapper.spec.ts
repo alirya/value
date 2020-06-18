@@ -6,7 +6,7 @@ it("force console log", () => spyOn(console, 'log').and.callThrough());
 
 describe("constructor", function() {
 
-    let standard = new Standard(1);
+    let standard = Standard(1);
     let wrapped = new Wrapper(standard);
 
     it(`number`, () => expect(wrapped.value).toBe(1));
@@ -15,7 +15,7 @@ describe("constructor", function() {
 
 describe("set", function() {
 
-    let standard = new Standard(1);
+    let standard = Standard(1);
     let wrapped = new Wrapper(standard);
 
 
@@ -25,7 +25,7 @@ describe("set", function() {
     });
 
     it(`subject`, () => {
-        wrapped.subject = new Standard(20);
+        wrapped.subject = Standard(20);
         expect(wrapped.value).toBe(20)
     });
 });
