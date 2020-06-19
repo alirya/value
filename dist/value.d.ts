@@ -1,3 +1,3 @@
-export default interface Value<Value = unknown> {
+export default interface Value<Value = any> {
     value: Value;
 }
