@@ -1,6 +1,9 @@
 import Value from "./value";
 import Infer from "./infer/value";
 import Validatable from "@dikac/t-validatable/validatable";
+import ReturnMemoize from "@dikac/t-function/return/memoize";
+import ReturnCallback from "@dikac/t-function/return/callback";
+import Functions from "@dikac/t-function/functions";
 
 /**
  * Wrap {@link Value} and cache its value
@@ -13,17 +16,23 @@ export default class Memoize<
     Readonly<Value<Infer<Container>>>,
     Readonly<Validatable<boolean>>
 {
-    protected memoized : Value<Infer<Container>>|undefined;
+    protected memoized : ReturnMemoize<ReturnCallback<Functions<[], Infer<Container>>>>;
 
     constructor(
         public subject : Container
     ) {
-        this.clear();
+
+        let callback  = new ReturnCallback({
+            argument : [],
+            value : () => subject.value
+        });
+
+        this.memoized = new ReturnMemoize(callback);
     }
 
     get valid () : boolean {
 
-        return this.memoized !== undefined;
+        return this.memoized.valid;
     }
 
     /**
@@ -31,19 +40,12 @@ export default class Memoize<
      */
     clear () {
 
-        this.memoized = undefined;
+        this.memoized.clear();
     }
 
     get value () : Infer<Container> {
 
-        if(!this.valid) {
-
-            this.memoized = {
-                value : <Infer<Container>>this.subject.value
-            };
-        }
-
-        return (<Value<Infer<Container>>> this.memoized).value;
+        return this.memoized.return;
     }
 
 }

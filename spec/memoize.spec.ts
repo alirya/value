@@ -8,9 +8,10 @@ describe("test", function() {
     let memoize = new Memoized(standard);
 
 
-    it(`check value`, () =>
-        expect(memoize.value).toBe(10)
-    );
+    it(`check value`, () =>{
+
+        expect(memoize.value).toBe(10);
+    });
 
     it(`change subject value`, () =>{
         standard.value = 20;

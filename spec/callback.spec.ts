@@ -1,4 +1,4 @@
-import Callback from "../../dist/value/callback";
+import Callback from "../dist/callback";
 
 
 it("force console log", () => { spyOn(console, 'log').and.callThrough();});
@@ -11,12 +11,12 @@ describe("basic", function() {
         return number + number;
     };
 
-    let callback = new Callback(fn, [1]);
+    let callback = new Callback({value:fn, argument:[1]});
 
     it('validate initial data', function () {
 
         expect(callback.argument).toEqual([1]);
-        expect(callback.functions).toEqual(fn);
+        expect(callback.subject.value).toEqual(fn);
 
     });
 
@@ -28,7 +28,7 @@ describe("basic", function() {
 
     it('change argument', function () {
 
-        callback.argument = [2];
+        callback.subject.argument = [2];
         expect(callback.argument).toEqual([2]);
 
     })

@@ -1,6 +1,7 @@
 import Value from "./value";
 import Argument from "@dikac/t-function/argument/argument";
 import Functions from "@dikac/t-function/functions";
+import Call from "@dikac/t-function/any/call";
 
 export default class Callback<
     Fn extends Functions,
@@ -8,14 +9,19 @@ export default class Callback<
 {
 
     constructor(
-        public functions : Fn,
-        public argument : Parameters<Fn>
+        public subject : Value<Fn> & Argument<Parameters<Fn>>,
     ) {
     }
 
     get value () : ReturnType<Fn> {
 
-        return this.functions(...this.argument);
+        return Call(this.subject);
+    }
+
+    get argument() : Parameters<Fn> {
+
+        return this.subject.argument;
+
     }
 
 }
