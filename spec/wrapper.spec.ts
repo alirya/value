@@ -1,4 +1,3 @@
-import Standard from "../dist/standard";
 import Wrapper from "../dist/wrapper";
 
 it("enable console log", () => spyOn(console, 'log').and.callThrough());
@@ -6,7 +5,7 @@ it("enable console log", () => spyOn(console, 'log').and.callThrough());
 
 describe("constructor", function() {
 
-    let standard = Standard(1);
+    let standard = {value:1};
     let wrapped = new Wrapper(standard);
 
     it(`number`, () => expect(wrapped.value).toBe(1));
@@ -15,7 +14,7 @@ describe("constructor", function() {
 
 describe("set", function() {
 
-    let standard = Standard(1);
+    let standard = {value:1};
     let wrapped = new Wrapper(standard);
 
 
@@ -25,7 +24,7 @@ describe("set", function() {
     });
 
     it(`subject`, () => {
-        wrapped.subject = Standard(20);
+        wrapped.subject = {value:20};
         expect(wrapped.value).toBe(20)
     });
 });

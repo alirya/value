@@ -1,11 +1,10 @@
-import Standard from "../dist/standard";
 import Memoized from "../dist/memoize";
 
 it("enable console log", () => spyOn(console, 'log').and.callThrough());
 
 describe("test", function() {
 
-    let standard = Standard(10);
+    let standard = {value:10};
     let memoize = new Memoized(standard);
 
 
