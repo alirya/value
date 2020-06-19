@@ -5,7 +5,7 @@
   "dependencies": {
     "@dikac/deployer": "^0.1.5",
     "@dikac/t-message": "^0.3.0",
-    "@dikac/t-validatable": "^0.9.0"
+    "@dikac/t-validatable": "git+file:///b:/t-validatable"
   },
   "devDependencies": {
     "@types/jasmine": "^3.5.10",

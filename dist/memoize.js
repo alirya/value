@@ -19,6 +19,9 @@
             this.subject = subject;
             this.reset();
         }
+        get valid() {
+            return this.memoized !== undefined;
+        }
         /**
          * clear cached value
          */
@@ -26,7 +29,7 @@
             this.memoized = undefined;
         }
         get value() {
-            if (!this.memoized) {
+            if (!this.valid) {
                 this.memoized = {
                     value: this.subject.value
                 };
