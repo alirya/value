@@ -1,6 +1,6 @@
 import Standard from "../dist/standard";
 
-it("force console log", () => spyOn(console, 'log').and.callThrough());
+it("enable console log", () => spyOn(console, 'log').and.callThrough());
 
 
 describe("constructor", function() {

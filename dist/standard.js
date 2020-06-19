@@ -9,6 +9,9 @@
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
+    /**
+     * create {@link Value} form {@param value}
+     */
     function Standard(value) {
         return { value: value };
     }

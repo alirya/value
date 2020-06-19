@@ -10,16 +10,30 @@
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     /**
-     * Readonly wrapper for {@link Value}
+     * Wrap {@link Value} and cache its value
+     *
+     * suitable to cached value from heave operation
      */
-    class Wrapper {
+    class Memoize {
         constructor(subject) {
             this.subject = subject;
+            this.reset();
+        }
+        /**
+         * clear cached value
+         */
+        reset() {
+            this.memoized = undefined;
         }
         get value() {
-            return this.subject.value;
+            if (!this.memoized) {
+                this.memoized = {
+                    value: this.subject.value
+                };
+            }
+            return this.memoized.value;
         }
     }
-    exports.default = Wrapper;
+    exports.default = Memoize;
 });
-//# sourceMappingURL=wrapper.js.map
+//# sourceMappingURL=memoize.js.map
