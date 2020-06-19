@@ -25,7 +25,7 @@ describe("test", function() {
 
     it(`reset memoize`, () =>{
 
-        memoize.reset();
+        memoize.clear();
         expect(memoize.value).toBe(20)
     });
 });

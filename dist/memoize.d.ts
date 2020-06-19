@@ -14,6 +14,6 @@ export default class Memoize<Container extends Value = Value> implements Readonl
     /**
      * clear cached value
      */
-    reset(): void;
+    clear(): void;
     get value(): Infer<Container>;
 }

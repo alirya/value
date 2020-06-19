@@ -17,7 +17,7 @@
     class Memoize {
         constructor(subject) {
             this.subject = subject;
-            this.reset();
+            this.clear();
         }
         get valid() {
             return this.memoized !== undefined;
@@ -25,7 +25,7 @@
         /**
          * clear cached value
          */
-        reset() {
+        clear() {
             this.memoized = undefined;
         }
         get value() {

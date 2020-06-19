@@ -18,7 +18,7 @@ export default class Memoize<
     constructor(
         public subject : Container
     ) {
-        this.reset();
+        this.clear();
     }
 
     get valid () : boolean {
@@ -29,7 +29,7 @@ export default class Memoize<
     /**
      * clear cached value
      */
-    reset () {
+    clear () {
 
         this.memoized = undefined;
     }
