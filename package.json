@@ -4,8 +4,7 @@
   "description": "Typescript value",
   "dependencies": {
     "@dikac/deployer": "^0.1.5",
-    "@dikac/t-function": "git+file:///b:/t-function",
-    "@dikac/t-validatable": "git+file:///b:/t-validatable"
+    "@dikac/t-function": "git+file:///b:/t-function"
   },
   "devDependencies": {
     "@types/jasmine": "^3.5.10",

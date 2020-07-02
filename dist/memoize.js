@@ -23,19 +23,19 @@
                 argument: [],
                 value: () => subject.value
             });
-            this.memoized = new memoize_1.default(callback);
+            this.memoize = new memoize_1.default(callback);
         }
-        get valid() {
-            return this.memoized.valid;
+        get memoized() {
+            return this.memoize.memoized;
         }
         /**
          * clear cached value
          */
         clear() {
-            this.memoized.clear();
+            this.memoize.clear();
         }
         get value() {
-            return this.memoized.return;
+            return this.memoize.return;
         }
     }
     exports.default = Memoize;
