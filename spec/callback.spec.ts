@@ -15,7 +15,7 @@ describe("basic", function() {
 
     it('validate initial data', function () {
 
-        expect(callback.argument).toEqual([1]);
+        expect(callback.subject.argument).toEqual([1]);
         expect(callback.subject.value).toEqual(fn);
 
     });
@@ -29,7 +29,7 @@ describe("basic", function() {
     it('change argument', function () {
 
         callback.subject.argument = [2];
-        expect(callback.argument).toEqual([2]);
+        expect(callback.subject.argument).toEqual([2]);
 
     })
 

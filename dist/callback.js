@@ -17,9 +17,6 @@
         get value() {
             return call_1.default(this.subject);
         }
-        get argument() {
-            return this.subject.argument;
-        }
     }
     exports.default = Callback;
 });

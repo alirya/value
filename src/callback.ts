@@ -5,7 +5,7 @@ import Call from "@dikac/t-function/any/call";
 
 export default class Callback<
     Fn extends Functions,
-> implements Readonly<Value<ReturnType<Fn>>>, Argument<Parameters<Fn>>
+> implements Readonly<Value<ReturnType<Fn>>>
 {
 
     constructor(
@@ -17,11 +17,4 @@ export default class Callback<
 
         return Call(this.subject);
     }
-
-    get argument() : Parameters<Fn> {
-
-        return this.subject.argument;
-
-    }
-
 }
