@@ -1,8 +1,5 @@
 import Value from "./value";
 import Infer from "./infer/value";
-import ReturnMemoize from "@dikac/t-function/return/memoize";
-import ReturnCallback from "@dikac/t-function/return/callback";
-import Functions from "@dikac/t-function/functions";
 /**
  * Wrap {@link Value} and cache its value
  *
@@ -10,7 +7,7 @@ import Functions from "@dikac/t-function/functions";
  */
 export default class Memoize<Container extends Value = Value> implements Readonly<Value<Infer<Container>>> {
     subject: Container;
-    protected memoize: ReturnMemoize<ReturnCallback<Functions<[], Infer<Container>>>>;
+    protected memoize: Value<Infer<Container>> | undefined;
     constructor(subject: Container);
     get memoized(): boolean;
     /**
