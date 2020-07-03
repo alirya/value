@@ -4,7 +4,7 @@ import Infer from "./infer/value";
 /**
  * Readonly wrapper for {@link Value}
  */
-export default class Wrapper<
+export default class Readonly<
     Container extends Value = Value
 > implements Readonly<
     Value<Infer<Container>>

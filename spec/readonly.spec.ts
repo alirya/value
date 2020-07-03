@@ -1,4 +1,4 @@
-import Wrapper from "../dist/wrapper";
+import Readonly from "../dist/readonly";
 
 it("enable console log", () => spyOn(console, 'log').and.callThrough());
 
@@ -6,7 +6,7 @@ it("enable console log", () => spyOn(console, 'log').and.callThrough());
 describe("constructor", function() {
 
     let standard = {value:1};
-    let wrapped = new Wrapper(standard);
+    let wrapped = new Readonly(standard);
 
     it(`number`, () => expect(wrapped.value).toBe(1));
 });
@@ -15,7 +15,7 @@ describe("constructor", function() {
 describe("set", function() {
 
     let standard = {value:1};
-    let wrapped = new Wrapper(standard);
+    let wrapped = new Readonly(standard);
 
 
     it(`subject value`, () => {

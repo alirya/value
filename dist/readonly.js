@@ -12,7 +12,7 @@
     /**
      * Readonly wrapper for {@link Value}
      */
-    class Wrapper {
+    class Readonly {
         constructor(subject) {
             this.subject = subject;
         }
@@ -20,6 +20,6 @@
             return this.subject.value;
         }
     }
-    exports.default = Wrapper;
+    exports.default = Readonly;
 });
-//# sourceMappingURL=wrapper.js.map
+//# sourceMappingURL=readonly.js.map

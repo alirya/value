@@ -1,4 +1,3 @@
-import Wrapper from "../dist/wrapper";
 import ObjectProperty from "../dist/object-property";
 
 it("enable console log", () => spyOn(console, 'log').and.callThrough());
