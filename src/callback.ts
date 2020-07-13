@@ -1,7 +1,7 @@
 import Value from "./value";
 import Argument from "@dikac/t-function/argument/argument";
-import Functions from "@dikac/t-function/functions";
-import Call from "@dikac/t-function/any/call";
+import Functions from "@dikac/t-function/function";
+import Call from "@dikac/t-function/argument/any/call";
 
 export default class Callback<
     Fn extends Functions,
