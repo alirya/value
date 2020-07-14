@@ -1,23 +1,23 @@
 {
   "name": "@dikac/t-value",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "Typescript value",
   "dependencies": {
     "@dikac/deployer": "^0.1.5",
-    "@dikac/t-function": "^0.4.0",
+    "@dikac/t-function": "^0.4.2",
     "ts-toolbelt": "^6.12.2"
   },
   "devDependencies": {
-    "@types/jasmine": "^3.5.10",
-    "@types/node": "^12.12.47",
+    "@types/jasmine": "^3.5.11",
+    "@types/node": "^12.12.50",
     "cpy-cli": "^3.1.1",
     "jasmine": "^3.4.0",
+    "jasmine-ts-console-reporter": "^3.1.1",
     "json-properties-remover": "^0.1.2",
     "move-cli": "^1.2.1",
     "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.2",
-    "jasmine-ts-console-reporter": "^3.1.1",
-    "typescript": "^3.9.5"
+    "typescript": "^3.9.6"
   },
   "scripts": {
     "spec-run": "jasmine --reporter=jasmine-ts-console-reporter --config=./jasmine.json",
@@ -28,7 +28,7 @@
     "spec-compile-watch-script": "tsc -w -p tsconfig-spec.json",
     "compile": "tsc",
     "compile-watch": "tsc -w",
-    "release": "remove-json-properties dist/package.json private",
+    "release": "remove-json-properties dist/package.json private scripts.postinstall scripts.deploy dependencies.@dikac/deployer",
     "postrelease": "npm publish dist",
     "prerelease": "cpy     package.json package-lock.json LICENSE Readme.md .npmignore dist",
     "postpublish": "rimraf package.json package-lock.json LICENSE Readme.md .npmignore",
