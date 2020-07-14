@@ -1,4 +1,4 @@
-export default interface Value<Value = any> {
+export default interface Value<Value = unknown> {
 
    value : Value
 }

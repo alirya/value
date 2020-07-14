@@ -1,1 +1,1 @@
-{"version":3,"file":"callback.js","sourceRoot":"","sources":["../src/callback.ts"],"names":[],"mappings":";;;;;;;;;;;IAGA,8DAAuD;IAEvD,MAAqB,QAAQ;QAKzB,YACW,OAA8C;YAA9C,YAAO,GAAP,OAAO,CAAuC;QAEzD,CAAC;QAED,IAAI,KAAK;YAEL,OAAO,cAAI,CAAC,IAAI,CAAC,OAAO,CAAC,CAAC;QAC9B,CAAC;KACJ;IAdD,2BAcC"}
+{"version":3,"file":"callback.js","sourceRoot":"","sources":["../src/callback.ts"],"names":[],"mappings":";;;;;;;;;;;IAIA,iEAAwD;IAExD,SAAwB,QAAQ,CAAuB,QAAa,EAAE,QAAyB;QAE3F,OAAO,IAAI,8BAAkB,CAAC;YAC1B,KAAK,EAAG,QAAQ;YAChB,QAAQ,EAAG,QAAQ;SACtB,CAAC,CAAA;IACN,CAAC;IAND,2BAMC"}

@@ -6,7 +6,7 @@ import Infer from "./infer/value";
  */
 export default class Readonly<
     Container extends Value = Value
-> implements Readonly<
+> implements globalThis.Readonly<
     Value<Infer<Container>>
 > {
 
