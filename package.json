@@ -1,10 +1,10 @@
 {
   "name": "@dikac/t-value",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Typescript value",
   "dependencies": {
     "@dikac/deployer": "^0.1.5",
-    "@dikac/t-function": "git+file:///b:/t-function"
+    "@dikac/t-function": "^0.4.0"
   },
   "devDependencies": {
     "@types/jasmine": "^3.5.10",
