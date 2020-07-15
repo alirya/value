@@ -1,11 +1,11 @@
 {
   "name": "@dikac/t-value",
-  "version": "0.8.5",
+  "version": "0.8.6",
   "description": "Typescript value",
   "dependencies": {
     "@dikac/deployer": "^0.1.5",
     "@dikac/t-function": "^0.6.1",
-    "ts-toolbelt": "^6.13.0"
+    "ts-toolbelt": "^6.13.4"
   },
   "devDependencies": {
     "@types/jasmine": "^3.5.11",
