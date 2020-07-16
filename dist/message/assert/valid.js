@@ -4,18 +4,19 @@
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "./callback-from-object"], factory);
+        define(["require", "exports"], factory);
     }
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    const callback_from_object_1 = require("./callback-from-object");
-    function Callback(callback, argument) {
-        return new callback_from_object_1.default({
-            callback: callback,
-            argument: argument
-        });
+    /**
+     * Throw exception if given value is not {@link Validatable} type
+     */
+    function Valid(value, error = (v) => new Error(v.message)) {
+        if (!value.valid) {
+            throw error(value);
+        }
     }
-    exports.default = Callback;
+    exports.default = Valid;
 });
-//# sourceMappingURL=callback.js.map
+//# sourceMappingURL=valid.js.map

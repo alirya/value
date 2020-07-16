@@ -4,18 +4,16 @@
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "./callback-from-object"], factory);
+        define(["require", "exports", "../string/valid", "@dikac/t-function/new"], factory);
     }
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    const callback_from_object_1 = require("./callback-from-object");
-    function Callback(callback, argument) {
-        return new callback_from_object_1.default({
-            callback: callback,
-            argument: argument
-        });
+    const valid_1 = require("../string/valid");
+    const new_1 = require("@dikac/t-function/new");
+    function Valid(object, throwable = new_1.default(Error)) {
+        return throwable(valid_1.default(object));
     }
-    exports.default = Callback;
+    exports.default = Valid;
 });
-//# sourceMappingURL=callback.js.map
+//# sourceMappingURL=valid.js.map
