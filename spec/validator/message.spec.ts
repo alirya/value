@@ -1,5 +1,4 @@
-import Callback from "../../dist/message/callback";
-import Message from "../../src/validator/message";
+import Message from "../../dist/validator/message";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 
@@ -17,8 +16,6 @@ let messageSpec = new Message({
 );
 
 
-
-
 it("valid", () => {
 
     let validatable = messageSpec.validate('str');
@@ -33,7 +30,7 @@ it("invalid", () => {
 
     let validatable = messageSpec.validate(1);
     expect(validatable.valid).toBeFalse()
-    expect(validatable.value).toEqual(11);
+    expect(validatable.value).toEqual(1);
     expect(validatable.message).toBe('number')
 });
 
