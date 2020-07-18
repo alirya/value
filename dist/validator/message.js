@@ -4,14 +4,14 @@
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "../message/readonly-merge", "@dikac/t-message/callback", "@dikac/t-message/memoize"], factory);
+        define(["require", "exports", "@dikac/t-message/memoize", "../message/readonly-merge", "@dikac/t-message/callback"], factory);
     }
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
+    const memoize_1 = require("@dikac/t-message/memoize");
     const readonly_merge_1 = require("../message/readonly-merge");
     const callback_1 = require("@dikac/t-message/callback");
-    const memoize_1 = require("@dikac/t-message/memoize");
     class Message {
         constructor(subject, message) {
             this.subject = subject;

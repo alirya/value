@@ -1,37 +1,31 @@
-import Validator from "@dikac/t-validator/validator";
+import ValidatorInterface from "@dikac/t-validator/validator";
 import Validatable from "@dikac/t-validatable/validatable";
+import ValidatorValidatable from "@dikac/t-validator/validatable/validatable";
+import Parameter from "@dikac/t-validator/parameter/parameter";
 import Value from "../value";
 import MessageInterface from "@dikac/t-message/message";
-import ReadonlyMerge from "../message/readonly-merge";
 import FunctionSingle from "@dikac/t-function/function-single";
-import MessageCallback from "@dikac/t-message/callback";
 import MessageMemoize from "@dikac/t-message/memoize";
-
-type ValidatorType<Val> = Validatable  & Value<Val>;
-type MessageType<Val, Msg> = FunctionSingle<Readonly<Validatable & Value<Val>>, Msg>;
+import ReadonlyMerge from "../message/readonly-merge";
+import MessageCallback from "@dikac/t-message/callback";
 
 export default class Message<
-    Parameter,
-    Val,
-    Msg
-> implements Validator<
-    Parameter,
-    ValidatorType<Val>>,
-    MessageInterface<MessageType<Val, Msg>
-> {
+    Validator extends ValidatorInterface<unknown, Validatable & Value>, Message
+> implements
+    ValidatorInterface<unknown, Validatable & Value<Parameter<Validator>>  & MessageInterface<Message>>,
+    MessageInterface<FunctionSingle<ValidatorValidatable<Validator>, Message>> {
 
     constructor(
-        public subject : Validator<Parameter, ValidatorType<Val>>,
-        public message : MessageType<Val, Msg>,
+        public subject : Validator,
+        public message : FunctionSingle<ValidatorValidatable<Validator>, Message>
     ) {
-
     }
 
-    validate(value: Parameter): ValidatorType<Val> & MessageInterface<Msg> {
+    validate(value: Parameter<Validator>): Validatable & Value<Parameter<Validator>> & MessageInterface<Message> {
 
         let validatable = this.subject.validate(value);
-        let message = new MessageMemoize( new MessageCallback(this.message, [validatable]));
+        let message = new MessageMemoize( new MessageCallback(this.message, [<ValidatorValidatable<Validator>>validatable]));
 
-        return new ReadonlyMerge(validatable, message, validatable);
+        return <Validatable & Value<Parameter<Validator>> & MessageInterface<Message>> new ReadonlyMerge(validatable, message, validatable);
     }
 }
