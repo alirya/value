@@ -17,7 +17,7 @@ export default function Callback<
     Val,
     Msg,
     Return extends boolean = boolean
-    >(
+>(
     value : Val,
     validation : Function<[Val], Return>,
     message : Function<[Readonly<Value<Val> & Validatable<Return>>], Msg>,
