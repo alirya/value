@@ -1,6 +1,6 @@
 import Validatable from "@dikac/t-validatable/validatable";
 import Message from "@dikac/t-message/message";
-import InferMessage from "@dikac/t-message/infer/message";
+import InferMessage from "@dikac/t-message/return/return";
 import ValueWrapper from "../validatable/readonly-wrapper";
 import Value from "@dikac/t-value/value";
 /**

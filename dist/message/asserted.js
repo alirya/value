@@ -4,13 +4,13 @@
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "./readonly-wrapper", "@dikac/t-message/throwable/messsage"], factory);
+        define(["require", "exports", "./readonly-wrapper", "../validatable/assert/throwable/valid"], factory);
     }
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     const readonly_wrapper_1 = require("./readonly-wrapper");
-    const messsage_1 = require("@dikac/t-message/throwable/messsage");
+    const valid_1 = require("../validatable/assert/throwable/valid");
     /**
      * @inheritDoc {@link ReadonlyWrapper}
      *
@@ -22,7 +22,7 @@
          * @param subject
          * @param error
          */
-        constructor(subject, error = messsage_1.default) {
+        constructor(subject, error = valid_1.default) {
             super(subject);
             this.error = error;
         }

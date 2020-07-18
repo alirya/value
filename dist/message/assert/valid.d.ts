@@ -5,4 +5,4 @@ import Message from "@dikac/t-message/message";
 /**
  * Throw exception if given value is not {@link Validatable} type
  */
-export default function Valid<Assumption extends Argument, Argument extends Validatable & Value & Message = Validatable & Value & Message>(value: Argument, error?: Function<[Argument], Error>): asserts value is Assumption;
+export default function Valid<Assumption extends Argument, Argument extends Validatable & Value & Message = Validatable & Value & Message>(value: Argument, error: Function<[Argument], Error>): asserts value is Assumption;

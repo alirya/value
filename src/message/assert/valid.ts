@@ -12,7 +12,7 @@ export default function Valid<
     Argument extends Validatable & Value & Message = Validatable & Value & Message,
 >(
     value : Argument,
-    error : Function<[Argument], Error> = (v) => new Error(v.message)
+    error : Function<[Argument], Error>/* = (v) => new Error(v)*/
 ) : asserts value is Assumption {
 
     if(!value.valid) {

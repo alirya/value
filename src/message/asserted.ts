@@ -3,8 +3,8 @@ import ValueInfer from "@dikac/t-value/infer/value";
 import ReadonlyWrapper from "./readonly-wrapper";
 import Function from "@dikac/t-function/function";
 import Message from "@dikac/t-message/message";
-import ThrowableMessage from "@dikac/t-message/throwable/messsage";
 import Validatable from "@dikac/t-validatable/validatable";
+import ThrowableValid from "../validatable/assert/throwable/valid";
 
 /**
  * @inheritDoc {@link ReadonlyWrapper}
@@ -24,7 +24,7 @@ export default class Asserted<
      */
     constructor(
         subject : Instance,
-        public error : Function<[Instance], Error> = ThrowableMessage
+        public error : Function<[Instance], Error> = ThrowableValid
     ) {
 
         super(subject);
