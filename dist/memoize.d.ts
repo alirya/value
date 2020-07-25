@@ -1,5 +1,5 @@
 import Value from "./value";
-import Infer from "./infer/value";
+import Infer from "./value/value";
 /**
  * Wrap {@link Value} and cache its value
  *
