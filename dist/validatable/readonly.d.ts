@@ -1,4 +1,4 @@
-import Value from "@dikac/t-value/value";
+import Value from "../value";
 import ValidatableReadonly from "@dikac/t-validatable/readonly";
 /**
  * read only wrapper for {@link Value} and {@link Validatable}

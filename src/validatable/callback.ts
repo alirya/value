@@ -1,4 +1,4 @@
-import Value from "@dikac/t-value/value";
+import Value from "../value";
 import Function from "@dikac/t-function/function";
 import ReadonlyMerge from "./readonly-merge";
 import CallbackValidatable from "@dikac/t-validatable/callback";

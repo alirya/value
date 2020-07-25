@@ -1,7 +1,7 @@
 import Validator from "@dikac/t-validator/validator";
 import Validatable from "@dikac/t-validatable/validatable";
 import Message from "@dikac/t-message/message";
-import Value from "@dikac/t-value/value";
+import Value from "../value";
 import Function from "@dikac/t-function/function";
 import Type, { List } from "../value/type/type";
 export declare type Return<L extends List, Msg> = (Validatable<true> & Message<Msg> & Value<Type<L>> & {

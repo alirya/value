@@ -1,4 +1,4 @@
-import Value from "@dikac/t-value/value";
+import Value from "../value";
 import Guard from "@dikac/t-function/boolean/guard";
 import Validatable from "@dikac/t-validatable/validatable";
 declare type Return<Argument, Valid> = (Readonly<Value<Valid>> & Readonly<Validatable<true>>) | (Readonly<Value<Argument>> & Readonly<Validatable<false>>);

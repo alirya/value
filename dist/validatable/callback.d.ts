@@ -1,4 +1,4 @@
-import Value from "@dikac/t-value/value";
+import Value from "../value";
 import Function from "@dikac/t-function/function";
 import Validatable from "@dikac/t-validatable/validatable";
 /**

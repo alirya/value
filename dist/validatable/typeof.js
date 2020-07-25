@@ -4,13 +4,13 @@
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "@dikac/t-value/message/readonly-merge", "@dikac/t-value/message/callback", "../boolean/typeof-from-object"], factory);
+        define(["require", "exports", "../message/readonly-merge", "../message/callback", "../boolean/typeof-from-object"], factory);
     }
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    const readonly_merge_1 = require("@dikac/t-value/message/readonly-merge");
-    const callback_1 = require("@dikac/t-value/message/callback");
+    const readonly_merge_1 = require("../message/readonly-merge");
+    const callback_1 = require("../message/callback");
     const typeof_from_object_1 = require("../boolean/typeof-from-object");
     class Typeof extends readonly_merge_1.default {
         constructor(value, type, message) {

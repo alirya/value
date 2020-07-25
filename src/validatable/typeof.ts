@@ -1,9 +1,9 @@
-import Value from "@dikac/t-value/value";
+import Value from "../value";
 import Validatable from "@dikac/t-validatable/validatable";
 import Message from "@dikac/t-message/message";
 import Function from "@dikac/t-function/function";
-import MergeWrapper from "@dikac/t-value/message/readonly-merge";
-import MessageCallback from "@dikac/t-value/message/callback";
+import MergeWrapper from "../message/readonly-merge";
+import MessageCallback from "../message/callback";
 import Type, {List} from "../value/type/type";
 import TypeofFromObject from "../boolean/typeof-from-object";
 

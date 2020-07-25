@@ -1,6 +1,6 @@
 import Validatable from "@dikac/t-validatable/validatable";
 import Function from "@dikac/t-function/function";
-import Value from "@dikac/t-value/value";
+import Value from "../../value";
 import Message from "@dikac/t-message/message";
 
 /**

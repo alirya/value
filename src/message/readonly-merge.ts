@@ -1,7 +1,7 @@
 import Message from "@dikac/t-message/message";
 import InferMessage from "@dikac/t-message/return/return";
 import ValueWrapperMerge from "../validatable/readonly-merge";
-import Value from "@dikac/t-value/value";
+import Value from "../value";
 import Validatable from "@dikac/t-validatable/validatable";
 
 /**

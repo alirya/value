@@ -1,4 +1,4 @@
-import Value from "@dikac/t-value/value";
+import Value from "../value";
 import Callback from "./callback";
 import Function from "@dikac/t-function/function";
 import Message from "@dikac/t-message/message";

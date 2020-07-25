@@ -1,4 +1,4 @@
-import Value from "@dikac/t-value/value";
+import Value from "../value";
 import Function from "@dikac/t-function/function";
 import ValueCallback from "../validatable/callback";
 import MessageCallback from "@dikac/t-message/callback";

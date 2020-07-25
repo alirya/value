@@ -1,4 +1,4 @@
-import Value from "@dikac/t-value/value";
+import Value from "../value";
 import Function from "@dikac/t-function/function";
 import Message from "@dikac/t-message/message";
 import Guard from "@dikac/t-function/boolean/guard";

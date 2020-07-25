@@ -1,5 +1,5 @@
-import Value from "@dikac/t-value/value";
-import InferValue from "@dikac/t-value/infer/value";
+import Value from "../value";
+import InferValue from "../value/value";
 import ReadonlyWrapperValidatable from "@dikac/t-validatable/readonly-wrapper";
 import Validatable from "@dikac/t-validatable/validatable";
 

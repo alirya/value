@@ -1,5 +1,5 @@
 import Validatable from "@dikac/t-validatable/validatable";
-import Value from "@dikac/t-value/value";
+import Value from "../../../value";
 import Name from "@dikac/t-object/string/name";
 
 export default function Valid(object : Validatable & Value) : string {

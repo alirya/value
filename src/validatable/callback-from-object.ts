@@ -1,4 +1,4 @@
-import Value from "@dikac/t-value/value";
+import Value from "../value";
 import Validation from "@dikac/t-boolean/validation/validation";
 import Callback from "./callback";
 import Validatable from "@dikac/t-validatable/validatable";

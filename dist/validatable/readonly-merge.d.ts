@@ -1,6 +1,6 @@
 import ValidInfer from "@dikac/t-validatable/boolean/boolean";
-import Value from "@dikac/t-value/value";
-import ValueInfer from "@dikac/t-value/infer/value";
+import Value from "../value";
+import ValueInfer from "../value/value";
 import Validatable from "@dikac/t-validatable/validatable";
 /**
  * readonly wrapper for {@link Validatable}
