@@ -1,1 +1,0 @@
-{"version":3,"file":"typeof.js","sourceRoot":"","sources":["../../src/validator/typeof.ts"],"names":[],"mappings":";;;;;;;;;;;IAMA,kDAAsD;IAMtD,MAAqB,MAAM;QAKvB,YACW,IAAQ,EACR,OAAyC;YADzC,SAAI,GAAJ,IAAI,CAAI;YACR,YAAO,GAAP,OAAO,CAAkC;QAEpD,CAAC;QAED,QAAQ,CAAC,KAAc;YAEnB,OAAmC,IAAI,gBAAiB,CAAC,KAAK,EAAE,IAAI,CAAC,IAAI,EAAE,IAAI,CAAC,OAAO,CAAC,CAAC;QAC7F,CAAC;KACJ;IAfD,yBAeC"}

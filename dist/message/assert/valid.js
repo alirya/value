@@ -12,7 +12,7 @@
     /**
      * Throw exception if given value is not {@link Validatable} type
      */
-    function Valid(value, error /* = (v) => new Error(v)*/) {
+    function Valid(value, error) {
         if (!value.valid) {
             throw error(value);
         }
