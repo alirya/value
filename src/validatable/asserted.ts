@@ -1,5 +1,5 @@
 import Value from "../value";
-import ValueInfer from "../value/value";
+import ValueInfer from "../value/infer";
 import ReadonlyWrapper from "./readonly-wrapper";
 import Function from "@dikac/t-function/function";
 import ThrowableValid from "./assert/throwable/valid";

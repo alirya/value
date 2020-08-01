@@ -4,12 +4,12 @@
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "@dikac/t-function/argument/any/call"], factory);
+        define(["require", "exports", "@dikac/t-function/argument/value/call"], factory);
     }
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    const call_1 = require("@dikac/t-function/argument/any/call");
+    const call_1 = require("@dikac/t-function/argument/value/call");
     class CallbackFromObject {
         constructor(subject) {
             this.subject = subject;
