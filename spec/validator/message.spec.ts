@@ -1,13 +1,16 @@
 import Message from "../../dist/validator/message";
+import Return from "@dikac/t-validator/return/return";
+import Instance from "@dikac/t-validator/parameter/instance/instance";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 
 
 let messageSpec = new Message({
 
-        validate(value: unknown) {
-            return {
+        validate<Argument extends unknown>(value: Argument) : Return<unknown, Argument, string, Instance<any, string>> {
+            return <Return<unknown, Argument, string, Instance<any, string>>> {
                 value : value,
+                message : "string",
                 valid  : typeof value === "string"
             }
         }
