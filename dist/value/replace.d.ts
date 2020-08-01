@@ -1,5 +1,5 @@
 import Value from "../value";
-export declare type Replace<ValueT extends Value, Replace extends boolean> = {
+export declare type Replace<ValueT extends Value, Replace extends any> = {
     [Key in keyof ValueT]: Key extends 'value' ? Replace : ValueT[Key];
 };
 export default Replace;
