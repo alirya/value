@@ -5,20 +5,20 @@ import ValidatableReadonly from "@dikac/t-validatable/readonly";
  * read only wrapper for {@link Value} and {@link Validatable}
  */
 export default class Readonly<
-    Val,
+    ValueT,
     Valid extends boolean
 > extends ValidatableReadonly<Valid> implements
-    globalThis.Readonly<Value<Val>>
+    globalThis.Readonly<Value<ValueT>>
 {
 
     constructor(
-        private _value : Val,
+        private _value : ValueT,
         valid : Valid,
     ) {
         super(valid);
     }
 
-    get value() : Val {
+    get value() : ValueT {
 
         return this._value;
     }

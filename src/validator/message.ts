@@ -1,4 +1,4 @@
-import ValidatorInterface from "@dikac/t-validator/validator";
+import Validator from "@dikac/t-validator/validator";
 import ReturnInfer from "@dikac/t-validator/return/infer";
 import MessageInterface from "@dikac/t-message/message";
 import FunctionSingle from "@dikac/t-function/function-single";
@@ -11,23 +11,23 @@ import Return from "@dikac/t-validator/return/return";
 import Instance from "@dikac/t-validator/parameter/instance/instance";
 
 export default class Message<
-    Validator extends ValidatorInterface,
-    Message
+    ValidatorT extends Validator,
+    MessageT
 > implements
-    ValidatorInterface<BaseInfer<Validator>, TypeInfer<Validator>, Instance<BaseInfer<Validator>, Message>>,
-    MessageInterface<FunctionSingle<ReturnInfer<Validator>, Message>> {
+    Validator<BaseInfer<ValidatorT>, TypeInfer<ValidatorT>, Instance<BaseInfer<ValidatorT>, MessageT>>,
+    MessageInterface<FunctionSingle<ReturnInfer<ValidatorT>, MessageT>> {
 
     constructor(
-        public subject : Validator,
-        public message : FunctionSingle<ReturnInfer<Validator>, Message>
+        public subject : ValidatorT,
+        public message : FunctionSingle<ReturnInfer<ValidatorT>, MessageT>
     ) {
     }
 
-    validate<Argument extends BaseInfer<Validator>>(value: Argument) : Return<BaseInfer<Validator>, Argument, TypeInfer<Validator>, Instance<BaseInfer<Validator>, Message>> {
+    validate<Argument extends BaseInfer<ValidatorT>>(value: Argument) : Return<BaseInfer<ValidatorT>, Argument, TypeInfer<ValidatorT>, Instance<BaseInfer<ValidatorT>, MessageT>> {
 
         let validatable = this.subject.validate(value);
-        let message = new MessageMemoize( new MessageCallback(this.message, [<ReturnInfer<Validator>>validatable]));
+        let message = new MessageMemoize( new MessageCallback(this.message, [<ReturnInfer<ValidatorT>>validatable]));
 
-        return <Return<BaseInfer<Validator>, Argument, TypeInfer<Validator>, Instance<BaseInfer<Validator>, Message>>> new ReadonlyMerge(validatable, message, validatable);
+        return <Return<BaseInfer<ValidatorT>, Argument, TypeInfer<ValidatorT>, Instance<BaseInfer<ValidatorT>, MessageT>>> new ReadonlyMerge(validatable, message, validatable);
     }
 }

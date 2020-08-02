@@ -8,25 +8,25 @@ import Validatable from "@dikac/t-validatable/validatable";
  * merge {@link Value}, {@link Message} and {@link Validatable}
  */
 export default class ReadonlyMerge<
-    Val extends Value,
-    Msg extends Message,
+    ValueT extends Value,
+    MessageT extends Message,
     Instance extends Validatable,
 > extends
-    ValueWrapperMerge<Val, Instance>
+    ValueWrapperMerge<ValueT, Instance>
 implements
-    Readonly<Message<InferMessage<Msg>>>
+    Readonly<Message<InferMessage<MessageT>>>
 {
 
     constructor(
-         subjectValue: Val,
-         protected subjectMessage: Msg,
+         subjectValue: ValueT,
+         protected subjectMessage: MessageT,
          subjectValidatable: Instance,
     ) {
         super(subjectValue, subjectValidatable)
     }
 
-    get message(): InferMessage<Msg> {
+    get message(): InferMessage<MessageT> {
 
-        return <InferMessage<Msg>> this.subjectMessage.message;
+        return <InferMessage<MessageT>> this.subjectMessage.message;
     }
 }

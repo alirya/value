@@ -10,12 +10,12 @@ import Validatable from "@dikac/t-validatable/validatable";
  * {@param validation}
  */
 export default function Callback<
-    Val,
+    ValueT,
     Return extends boolean = boolean,
 >(
-    value : Val,
-    validation : Function<[Val], Return>
-) : Readonly<Value<Val> & Validatable<Return>> {
+    value : ValueT,
+    validation : Function<[ValueT], Return>
+) : Readonly<Value<ValueT> & Validatable<Return>> {
 
     let callback = new CallbackValidatable([value], validation);
     let memoize = new Memoize(callback);

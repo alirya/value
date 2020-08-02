@@ -2,23 +2,23 @@ import ReadonlyValue from "../validatable/readonly";
 import Message from "@dikac/t-message/message";
 
 export default class Readonly<
-    Val,
-    Msg,
+    Value,
+    MessageT,
     Valid extends boolean
 > extends
-    ReadonlyValue<Val, Valid>
+    ReadonlyValue<Value, Valid>
 implements
-    globalThis.Readonly<Message<Msg>>
+    globalThis.Readonly<Message<MessageT>>
 {
     constructor(
-        value : Val,
+        value : Value,
         valid : Valid,
-        private _message : Msg,
+        private _message : MessageT,
     ) {
         super(value, valid);
     }
 
-    get message() : Msg {
+    get message() : MessageT {
 
         return this._message;
     }

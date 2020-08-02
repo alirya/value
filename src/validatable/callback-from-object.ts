@@ -10,11 +10,11 @@ import Validatable from "@dikac/t-validatable/validatable";
  * {@link Value} is used as value
  */
 export default function CallbackFromObject<
-    Val,
+    ValueT,
     Return extends boolean,
 >(
-    object : Value<Val> & Validation<[Val], Return>,
-) : Readonly<Value<Val>> & Readonly<Validatable<Return>> {
+    object : Value<ValueT> & Validation<[ValueT], Return>,
+) : Readonly<Value<ValueT>> & Readonly<Validatable<Return>> {
 
     return Callback(object.value, object.validation);
 }

@@ -1,22 +1,22 @@
 {
   "name": "@dikac/t-value",
-  "version": "0.11.2",
+  "version": "0.11.3",
   "description": "Typescript value",
   "dependencies": {
     "@dikac/deployer": "^0.1.5",
     "@dikac/t-function": "^0.11.0",
-    "@dikac/t-message": "^0.8.0",
-    "@dikac/t-validatable": "^0.18.0",
-    "@dikac/t-validator": "^0.13.0",
-    "ts-toolbelt": "^6.13.28"
+    "@dikac/t-message": "^0.8.1",
+    "@dikac/t-validatable": "^0.18.1",
+    "@dikac/t-validator": "^0.13.1",
+    "ts-toolbelt": "^6.13.39"
   },
   "devDependencies": {
-    "mkdirp": "^1.0.4",
-    "@types/jasmine": "^3.5.11",
+    "@types/jasmine": "^3.5.12",
     "cpy-cli": "^3.1.1",
     "jasmine": "^3.6.1",
     "jasmine-ts-console-reporter": "^3.1.1",
     "json-properties-remover": "^0.1.2",
+    "mkdirp": "^1.0.4",
     "move-cli": "^1.2.1",
     "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.2",

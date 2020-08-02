@@ -4,10 +4,7 @@ import Function from "@dikac/t-function/function";
 import Message from "@dikac/t-message/message";
 import Guard from "@dikac/t-function/boolean/guard";
 import Validatable from "@dikac/t-validatable/validatable";
-
-type Return<Argument, Valid extends Argument, Msg> =
-    (Readonly<Value<Valid>> & Message<Msg> & Readonly<Validatable<true>>) |
-    (Readonly<Value<Argument>> & Message<Msg> & Readonly<Validatable<false>>);
+import Return from "@dikac/t-validator/return/return";
 
 /**
  * same as {@link Callback} but with type
@@ -15,12 +12,12 @@ type Return<Argument, Valid extends Argument, Msg> =
 export default function CallbackType<
     Argument,
     Valid extends Argument,
-    Msg
+    MessageT
 >(
     value : Argument,
     callback : Guard<Argument, Valid>,
-    messsage : Function<[Return<Argument, Valid, Msg>], Msg>,
-) : Return<Argument, Valid, Msg> {
+    messsage : Function<[Return<Argument, Argument, Valid, Readonly<Value<Argument> & Validatable & Message<MessageT>>>], MessageT>,
+) : Return<Argument, Argument, Valid, Readonly<Value<Argument> & Validatable & Message<MessageT>>> {
 
-    return <Return<Argument, Valid, Msg>> Callback(value, callback, messsage)
+    return <Return<Argument, Argument, Valid, Readonly<Value<Argument> & Validatable & Message<MessageT>>>> Callback(value, callback, messsage)
 }

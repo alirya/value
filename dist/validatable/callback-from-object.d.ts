@@ -7,4 +7,4 @@ import Validatable from "@dikac/t-validatable/validatable";
  * {@link validation} is used as callback
  * {@link Value} is used as value
  */
-export default function CallbackFromObject<Val, Return extends boolean>(object: Value<Val> & Validation<[Val], Return>): Readonly<Value<Val>> & Readonly<Validatable<Return>>;
+export default function CallbackFromObject<ValueT, Return extends boolean>(object: Value<ValueT> & Validation<[ValueT], Return>): Readonly<Value<ValueT>> & Readonly<Validatable<Return>>;
