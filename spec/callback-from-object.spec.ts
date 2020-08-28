@@ -1,5 +1,4 @@
 import CallbackFromObject from "../dist/callback-from-object";
-import Functions from "@dikac/t-function/function";
 import Argument from "@dikac/t-function/argument/argument";
 import Callback from "@dikac/t-function/callback/callback";
 
@@ -14,7 +13,7 @@ describe("basic", function() {
         return number + number;
     };
 
-    let argument : Callback<Functions<[number],number>> & Argument<[number]> = {callback:fn, argument:[1]};
+    let argument : Callback<(n:number)=>number> & Argument<[number]> = {callback:fn, argument:[1]};
     let callback = new CallbackFromObject(argument);
 
     it('validate initial data', function () {

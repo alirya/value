@@ -1,20 +1,20 @@
 import Value from "./value";
 import Argument from "@dikac/t-function/argument/argument";
-import Function from "@dikac/t-function/function";
 import Call from "@dikac/t-function/argument/value/call";
 import Callback from "@dikac/t-function/callback/callback";
+import Callable from "@dikac/t-function/callable";
 
 export default class CallbackFromObject<
-    FunctionT extends Function,
-> implements Readonly<Value<ReturnType<FunctionT>>>
+    FunctionType extends Callable,
+> implements Readonly<Value<ReturnType<FunctionType>>>
 {
 
     constructor(
-        private subject : Callback<FunctionT> & Argument<Parameters<FunctionT>>,
+        private subject : Callback<FunctionType> & Argument<Parameters<FunctionType>>,
     ) {
     }
 
-    get value () : ReturnType<FunctionT> {
+    get value () : ReturnType<FunctionType> {
 
         return Call(this.subject);
     }

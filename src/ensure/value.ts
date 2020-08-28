@@ -1,4 +1,3 @@
-import Function from "@dikac/t-function/function";
 import AssertString from "../assert/value";
 import ValueError from "../assert/throwable/value";
 import ValueInterface from "../value";
@@ -13,7 +12,7 @@ import ValueInterface from "../value";
  */
 export default function Value(
     value : object,
-    error : Function<[object], Error> = ValueError
+    error : (value:object)=>Error = ValueError
 ) : ValueInterface {
 
     AssertString(value, error);

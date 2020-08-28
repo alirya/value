@@ -1,8 +1,13 @@
 import Value from "./value";
-import Functions from "@dikac/t-function/function";
 import CallbackFromObject from "./callback-from-object";
+import Callable from "@dikac/t-function/callable";
 
-export default function Callback<FunctionT extends Functions>(callback : FunctionT, argument : Parameters<FunctionT>) : Readonly<Value<ReturnType<FunctionT>>> {
+export default function Callback<
+    FunctionType extends Callable
+>(
+    callback : FunctionType,
+    argument : Parameters<FunctionType>
+) : Readonly<Value<ReturnType<FunctionType>>> {
 
     return new CallbackFromObject({
         callback : callback,
