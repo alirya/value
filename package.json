@@ -1,11 +1,11 @@
 {
   "name": "@dikac/t-value",
-  "version": "0.12.5",
+  "version": "0.12.6",
   "description": "Typescript value",
   "dependencies": {
     "@dikac/deployer": "^0.1.5",
     "@dikac/t-function": "^0.12.4",
-    "@dikac/t-object": "^0.33.0",
+    "@dikac/t-object": "^0.33.1",
     "ts-toolbelt": "^6.15.5"
   },
   "devDependencies": {
