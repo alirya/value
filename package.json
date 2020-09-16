@@ -4,8 +4,8 @@
   "description": "Typescript value",
   "dependencies": {
     "@dikac/deployer": "^0.1.5",
-    "@dikac/t-function": "^0.12.5",
-    "@dikac/t-object": "^0.34.0",
+    "@dikac/t-function": "^0.12.6",
+    "@dikac/t-object": "^0.34.2",
     "ts-toolbelt": "^6.15.5"
   },
   "devDependencies": {
