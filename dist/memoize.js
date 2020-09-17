@@ -1,42 +1,29 @@
-(function (factory) {
-    if (typeof module === "object" && typeof module.exports === "object") {
-        var v = factory(require, exports);
-        if (v !== undefined) module.exports = v;
+/**
+ * Wrap {@link Value} and cache its value
+ *
+ * suitable to cached value from heave operation
+ */
+export default class Memoize {
+    constructor(subject) {
+        this.subject = subject;
+        this.clear();
     }
-    else if (typeof define === "function" && define.amd) {
-        define(["require", "exports"], factory);
+    get memoized() {
+        return this.memoize !== undefined;
     }
-})(function (require, exports) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
     /**
-     * Wrap {@link Value} and cache its value
-     *
-     * suitable to cached value from heave operation
+     * clear cached value
      */
-    class Memoize {
-        constructor(subject) {
-            this.subject = subject;
-            this.clear();
-        }
-        get memoized() {
-            return this.memoize !== undefined;
-        }
-        /**
-         * clear cached value
-         */
-        clear() {
-            this.memoize = undefined;
-        }
-        get value() {
-            if (!this.memoized) {
-                this.memoize = {
-                    value: this.subject.value
-                };
-            }
-            return this.memoize.value;
-        }
+    clear() {
+        this.memoize = undefined;
     }
-    exports.default = Memoize;
-});
+    get value() {
+        if (!this.memoized) {
+            this.memoize = {
+                value: this.subject.value
+            };
+        }
+        return this.memoize.value;
+    }
+}
 //# sourceMappingURL=memoize.js.map
