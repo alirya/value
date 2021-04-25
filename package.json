@@ -1,25 +1,24 @@
 {
   "name": "@dikac/t-value",
-  "version": "0.14.5",
+  "version": "0.14.6",
   "description": "Typescript value",
   "dependencies": {
-    "@dikac/deployer": "^0.1.5",
-    "@dikac/t-function": "^0.14.1",
-    "@dikac/t-object": "^0.36.4",
-    "ts-toolbelt": "^8.0.6"
+    "@dikac/t-function": "^0.14.2",
+    "@dikac/t-object": "^0.36.10",
+    "ts-toolbelt": "^9.6.0"
   },
   "devDependencies": {
-    "@types/jasmine": "^3.5.14",
+    "@types/jasmine": "^3.6.9",
     "cpy-cli": "^3.1.1",
     "esm": "^3.2.25",
-    "jasmine": "^3.6.1",
+    "jasmine": "^3.7.0",
     "jasmine-ts-console-reporter": "^3.1.1",
     "json-properties-remover": "^0.1.2",
     "mkdirp": "^1.0.4",
     "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.2",
     "ts-cleaner": "^1.0.5",
-    "typescript": "^4.0.3"
+    "typescript": "^4.2.4"
   },
   "scripts": {
     "spec-run-js": "node -r esm node_modules/jasmine/bin/jasmine.js --config=./jasmine.json",
@@ -39,12 +38,10 @@
     "compile-script-watch": "tsc -w",
     "compile-watch": "npm-run-all --sequential compile-ensure-directory --parallel compile-script-watch cleanup-watch",
     "compile-ensure-directory": "mkdirp dist",
-    "release": "remove-json-properties dist/package.json private scripts.postinstall scripts.deploy dependencies.@dikac/deployer",
+    "release": "remove-json-properties dist/package.json private scripts.postinstall",
     "postrelease": "npm publish dist",
     "prerelease": "cpy     package.json package-lock.json LICENSE Readme.md .npmignore dist",
-    "postpublish": "rimraf package.json package-lock.json LICENSE Readme.md .npmignore",
-    "postinstall": "npm run deploy",
-    "deploy": "deployer /.git /dist /"
+    "postpublish": "rimraf package.json package-lock.json LICENSE Readme.md .npmignore"
   },
   "author": "",
   "private": true,
