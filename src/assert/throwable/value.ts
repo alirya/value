@@ -1,14 +1,11 @@
-import ValueType from "../../boolean/string/value";
-import Callback from "@dikac/t-function/assert/throwable/callback";
+import Validatable from "@dikac/t-validatable/validatable";
+import ValueParameters from "./value-parameters";
+import ValueParameter from "./value-parameter";
 
-export default function Value(
-    string : unknown,
-    value : (
-        valid : boolean,
-        value : unknown,
-    ) => string = ValueType,
-    error : (message:string)=>Error = (string : string) => new Error(string)
-) : Error {
+namespace Value {
 
-    return Callback([string], value, error);
+    export const Parameters = ValueParameters
+    export const Parameter = ValueParameter
 }
+
+export default Value;

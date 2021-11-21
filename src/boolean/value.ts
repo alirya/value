@@ -8,11 +8,6 @@ export default function Value(
     value : object,
 ) : value is ValueInterface {
 
-    if(!PropertyExists(value, 'value')) {
-
-        return false;
-    }
-
-    return true;
+    return PropertyExists(value, 'value');
 
 }

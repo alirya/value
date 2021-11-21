@@ -1,14 +1,11 @@
-export default function Value(
-    valid : boolean,
-    value : unknown,
-) : string {
+import Validatable from "@dikac/t-validatable/validatable";
+import ValueParameters from "./value-parameters";
+import ValueParameter from "./value-parameter";
 
-    if(valid) {
+namespace Value {
 
-        return `value is compatible with Value interface`;
-
-    } else {
-
-        return `value is not compatible with Value interface`;
-    }
+    export const Parameters = ValueParameters
+    export const Parameter = ValueParameter
 }
+
+export default Value;

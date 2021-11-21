@@ -1,4 +1,4 @@
-import CallbackFromObject from "../dist/callback-from-object";
+import CallbackFromObject from "../dist/callback-parameter";
 import Argument from "@dikac/t-function/argument/argument";
 import Callback from "@dikac/t-function/callback/callback";
 

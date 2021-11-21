@@ -1,1 +1,7 @@
-export default function Value(string: unknown, value?: (valid: boolean, value: unknown) => string, error?: (message: string) => Error): Error;
+import ValueParameters from "./value-parameters";
+import ValueParameter from "./value-parameter";
+declare namespace Value {
+    const Parameters: typeof ValueParameters;
+    const Parameter: typeof ValueParameter;
+}
+export default Value;

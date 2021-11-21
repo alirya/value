@@ -1,6 +1,6 @@
 import Guard from "../boolean/value";
-import Callback from "@dikac/t-function/assert/callback";
-import StringError from "./throwable/value";
+import Callback from "@dikac/t-function/assert/callback-parameters";
+import StringError from "./throwable/value-parameters";
 /**
  * assert {@param value} is compatible with {@link ValueInterface}
  *

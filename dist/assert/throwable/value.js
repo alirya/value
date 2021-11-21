@@ -1,6 +1,9 @@
-import ValueType from "../../boolean/string/value";
-import Callback from "@dikac/t-function/assert/throwable/callback";
-export default function Value(string, value = ValueType, error = (string) => new Error(string)) {
-    return Callback([string], value, error);
-}
+import ValueParameters from "./value-parameters";
+import ValueParameter from "./value-parameter";
+var Value;
+(function (Value) {
+    Value.Parameters = ValueParameters;
+    Value.Parameter = ValueParameter;
+})(Value || (Value = {}));
+export default Value;
 //# sourceMappingURL=value.js.map

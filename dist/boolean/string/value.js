@@ -1,9 +1,9 @@
-export default function Value(valid, value) {
-    if (valid) {
-        return `value is compatible with Value interface`;
-    }
-    else {
-        return `value is not compatible with Value interface`;
-    }
-}
+import ValueParameters from "./value-parameters";
+import ValueParameter from "./value-parameter";
+var Value;
+(function (Value) {
+    Value.Parameters = ValueParameters;
+    Value.Parameter = ValueParameter;
+})(Value || (Value = {}));
+export default Value;
 //# sourceMappingURL=value.js.map

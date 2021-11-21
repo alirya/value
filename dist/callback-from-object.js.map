@@ -1,1 +1,0 @@
-{"version":3,"file":"callback-from-object.js","sourceRoot":"","sources":["../src/callback-from-object.ts"],"names":[],"mappings":"AAEA,OAAO,IAAI,MAAM,uCAAuC,CAAC;AAIzD,MAAM,CAAC,OAAO,OAAO,kBAAkB;IAKnC,YACY,OAAqE;QAArE,YAAO,GAAP,OAAO,CAA8D;IAEjF,CAAC;IAED,IAAI,KAAK;QAEL,OAAO,IAAI,CAAC,IAAI,CAAC,OAAO,CAAC,CAAC;IAC9B,CAAC;CACJ"}
