@@ -1,5 +1,3 @@
-import AssertString from "../assert/value";
-import ValueError from "../assert/throwable/value-parameters";
 import ValueInterface from "../value";
 import Value from "../value";
 import ValueParameters from "./value-parameters";
@@ -13,8 +11,6 @@ import ValueParameters from "./value-parameters";
  * throw {@link Error} from {@param error} if {@param value} is not compatible
  */
 export default function ValueParameter(
-    //value : object,
-    //error : (value:object)=>Error = ValueError,
     {
         value,
         error,
@@ -22,8 +18,4 @@ export default function ValueParameter(
 ) : ValueInterface {
 
     return ValueParameters(value, error);
-
-    // AssertString(value, error);
-    //
-    // return value;
 }

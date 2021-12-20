@@ -1,5 +1,4 @@
 import Value from "../../dist/assert/value";
-import ValueInterface from "../../dist/value";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 
