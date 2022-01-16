@@ -26,14 +26,14 @@ describe('unvalidated value', function() {
         it('string', () => {
 
             let value = {value : 'string'};
-            expect(Type(value)).toBe(true)
+            expect(Type(value)).toBe(true);
 
         });
 
         it('integer', () => {
 
             let value = {value : 1};
-            expect(Type(value)).toBe(true)
+            expect(Type(value)).toBe(true);
 
         });
     });
@@ -43,18 +43,18 @@ describe('unvalidated value', function() {
         it('string', () => {
 
             let value = {string:'string'};
-            expect(Type(value)).toBe(false)
+            expect(Type(value)).toBe(false);
 
         });
 
         it('integer', () => {
 
             let value = {integer:1};
-            expect(Type(value)).toBe(false)
+            expect(Type(value)).toBe(false);
 
         });
     });
-})
+});
 
 
 describe('validated value', function() {
@@ -64,7 +64,7 @@ describe('validated value', function() {
         it('object', () => {
 
             let value = {value :{}};
-            expect(Type(value)).toBe(true)
+            expect(Type(value)).toBe(true);
         });
 
         it('class', () => {
@@ -75,7 +75,7 @@ describe('validated value', function() {
                 ){}
             }
 
-            expect(Type(new C)).toBe(true)
+            expect(Type(new C)).toBe(true);
         });
     });
 
@@ -84,7 +84,7 @@ describe('validated value', function() {
         it('object', () => {
 
             let value = {};
-            expect(Type(value)).toBe(false)
+            expect(Type(value)).toBe(false);
         });
 
         it('class', () => {
@@ -95,7 +95,7 @@ describe('validated value', function() {
                 ){}
             }
 
-            expect(Type(new C)).toBe(false)
+            expect(Type(new C)).toBe(false);
         });
     });
-})
+});

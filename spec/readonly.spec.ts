@@ -20,12 +20,12 @@ describe('set', function() {
 
     it(`subject value`, () => {
         standard.value = 10;
-        expect(wrapped.value).toBe(10)
+        expect(wrapped.value).toBe(10);
     });
 
     it(`subject`, () => {
         wrapped.subject = {value:20};
-        expect(wrapped.value).toBe(20)
+        expect(wrapped.value).toBe(20);
     });
 });
 

@@ -15,17 +15,17 @@ describe('test', function() {
 
     it(`change subject value`, () =>{
         standard.value = 20;
-        expect(standard.value).toBe(20)
+        expect(standard.value).toBe(20);
     });
 
     it(`recheck memoized value`, () => {
 
-        expect(memoize.value).toBe(10)
+        expect(memoize.value).toBe(10);
     });
 
     it(`reset memoize`, () =>{
 
         memoize.clear();
-        expect(memoize.value).toBe(20)
+        expect(memoize.value).toBe(20);
     });
 });

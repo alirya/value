@@ -34,7 +34,7 @@ describe('basic', function() {
         argument.argument = [2];
         expect(argument.argument).toEqual([2]);
 
-    })
+    });
 
     it('validate value', function () {
 

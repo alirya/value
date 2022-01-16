@@ -10,6 +10,6 @@ export default class CallbackParameters<
         argument : Parameters<FunctionType>
     ) {
 
-        super({callback, argument})
+        super({callback, argument});
     }
 }
