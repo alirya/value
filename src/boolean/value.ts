@@ -1,5 +1,5 @@
 import ValueInterface from '../value';
-import PropertyExists from '@dikac/t-object/property/boolean/exists';
+import PropertyExists from '@alirya/object/property/boolean/exists';
 
 /**
  * check if {@param value} is compatible with {@link ValueInterface}

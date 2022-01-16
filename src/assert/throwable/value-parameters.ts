@@ -1,6 +1,6 @@
 import ValueType from '../../boolean/string/value-parameters';
-import Callback from '@dikac/t-function/assert/throwable/callback-parameters';
-import Dynamic from '@dikac/t-validator/message/function/validatable-parameters';
+import Callback from '@alirya/function/assert/throwable/callback-parameters';
+import Dynamic from '@alirya/validator/message/function/validatable-parameters';
 
 export default function ValueParameters(
     value : unknown,

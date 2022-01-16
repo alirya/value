@@ -1,6 +1,6 @@
 import ValueContainer from '../../../dist/value';
 import Value from '../../../dist/value/boolean/value';
-import Object_ from '@dikac/t-object/boolean/object';
+import Object_ from '@alirya/object/boolean/object';
 
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});

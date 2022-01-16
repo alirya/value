@@ -1,6 +1,6 @@
 import CallbackFromObject from '../dist/callback-parameter';
-import Argument from '@dikac/t-function/argument/argument';
-import Callback from '@dikac/t-function/callback/callback';
+import Argument from '@alirya/function/argument/argument';
+import Callback from '@alirya/function/callback/callback';
 
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});

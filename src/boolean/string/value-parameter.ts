@@ -1,5 +1,5 @@
 import Value from '../../value';
-import Validatable from '@dikac/t-validatable/validatable';
+import Validatable from '@alirya/validatable/validatable';
 import ValueParameters from './value-parameters';
 
 export default function ValueParameter(

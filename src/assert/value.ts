@@ -1,5 +1,5 @@
 import Guard from '../boolean/value';
-import Callback from '@dikac/t-function/assert/callback-parameters';
+import Callback from '@alirya/function/assert/callback-parameters';
 import StringError from './throwable/value-parameters';
 import ValueInterface from '../value';
 

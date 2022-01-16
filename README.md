@@ -1,2 +1,2 @@
-# t-value
+# value
 typescipt value

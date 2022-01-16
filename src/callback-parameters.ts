@@ -1,4 +1,4 @@
-import Callable from '@dikac/t-function/callable';
+import Callable from '@alirya/function/callable';
 import CallbackParameter from './callback-parameter';
 
 export default class CallbackParameters<

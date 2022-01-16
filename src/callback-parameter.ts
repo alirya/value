@@ -1,8 +1,8 @@
 import Value from './value';
-import Argument from '@dikac/t-function/argument/argument';
-import Call from '@dikac/t-function/argument/value/call-parameter';
-import Callback from '@dikac/t-function/callback/callback';
-import Callable from '@dikac/t-function/callable';
+import Argument from '@alirya/function/argument/argument';
+import Call from '@alirya/function/argument/value/call-parameter';
+import Callback from '@alirya/function/callback/callback';
+import Callable from '@alirya/function/callable';
 
 export default class CallbackParameter<
     FunctionType extends Callable,
