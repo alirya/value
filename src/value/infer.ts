@@ -1,4 +1,4 @@
-import Value from "../value";
+import Value from '../value';
 
 type Infer<Type> = Type extends Value<infer As> ? As : never;
 

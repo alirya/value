@@ -1,7 +1,7 @@
-import Value from "../../value";
-import Message from "@dikac/t-message/message";
-import Dynamic from "@dikac/t-validator/message/function/validatable-parameter";
-import ValueParameters from "./value-parameters";
+import Value from '../../value';
+import Message from '@dikac/t-message/message';
+import Dynamic from '@dikac/t-validator/message/function/validatable-parameter';
+import ValueParameters from './value-parameters';
 
 export default function ValueParameter(
     {

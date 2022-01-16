@@ -1,6 +1,6 @@
-import AssertString from "../assert/value";
-import ValueError from "../assert/throwable/value-parameters";
-import ValueInterface from "../value";
+import AssertString from '../assert/value';
+import ValueError from '../assert/throwable/value-parameters';
+import ValueInterface from '../value';
 
 /**
  * return {@param value} is compatible with {@link ValueInterface}

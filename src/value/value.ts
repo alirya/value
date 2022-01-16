@@ -1,5 +1,5 @@
-import Infer from "./infer";
-import Value from "../value";
+import Infer from './infer';
+import Value from '../value';
 
 /**
  * get {@link Value.value} value

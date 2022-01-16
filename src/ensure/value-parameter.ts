@@ -1,6 +1,6 @@
-import ValueInterface from "../value";
-import Value from "../value";
-import ValueParameters from "./value-parameters";
+import ValueInterface from '../value';
+import Value from '../value';
+import ValueParameters from './value-parameters';
 
 /**
  * return {@param value} is compatible with {@link ValueInterface}

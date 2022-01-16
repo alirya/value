@@ -1,12 +1,12 @@
-import ValueContainer from "../../../dist/value";
-import Value from "../../../dist/value/boolean/value";
-import Object_ from "@dikac/t-object/boolean/object";
+import ValueContainer from '../../../dist/value';
+import Value from '../../../dist/value/boolean/value';
+import Object_ from '@dikac/t-object/boolean/object';
 
 
-it("force console log", () => { spyOn(console, 'log').and.callThrough();});
+it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
 
-it("valid", function() {
+it('valid', function() {
 
     let value : ValueContainer<object> = {value:{}};
 
@@ -15,7 +15,7 @@ it("valid", function() {
 });
 
 
-it("invalid", function() {
+it('invalid', function() {
 
     let value : ValueContainer<string> = {value:'string'};
 

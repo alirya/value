@@ -1,7 +1,7 @@
-import Type from "../../dist/boolean/value";
-import Value from "../../dist/value";
+import Type from '../../dist/boolean/value';
+import Value from '../../dist/value';
 
-it("force console log", () => { spyOn(console, 'log').and.callThrough();});
+it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
 describe(`compiler compatible`,function() {
 
@@ -16,18 +16,18 @@ describe(`compiler compatible`,function() {
 
 });
 
-describe("unvalidated value", function() {
+describe('unvalidated value', function() {
 
-    describe("valid", function() {
+    describe('valid', function() {
 
-        it("string", () => {
+        it('string', () => {
 
             let value = {value : 'string'};
             expect(Type(value)).toBe(true)
 
         });
 
-        it("integer", () => {
+        it('integer', () => {
 
             let value = {value : 1};
             expect(Type(value)).toBe(true)
@@ -35,16 +35,16 @@ describe("unvalidated value", function() {
         });
     });
 
-    describe("invalid", function() {
+    describe('invalid', function() {
 
-        it("string", () => {
+        it('string', () => {
 
             let value = {string:'string'};
             expect(Type(value)).toBe(false)
 
         });
 
-        it("integer", () => {
+        it('integer', () => {
 
             let value = {integer:1};
             expect(Type(value)).toBe(false)
@@ -54,17 +54,17 @@ describe("unvalidated value", function() {
 })
 
 
-describe("validated value", function() {
+describe('validated value', function() {
 
-    describe("valid", function() {
+    describe('valid', function() {
 
-        it("object", () => {
+        it('object', () => {
 
             let value = {value :{}};
             expect(Type(value)).toBe(true)
         });
 
-        it("class", () => {
+        it('class', () => {
 
             class C {
                 constructor(
@@ -76,15 +76,15 @@ describe("validated value", function() {
         });
     });
 
-    describe("invalid value", function() {
+    describe('invalid value', function() {
 
-        it("object", () => {
+        it('object', () => {
 
             let value = {};
             expect(Type(value)).toBe(false)
         });
 
-        it("class", () => {
+        it('class', () => {
 
             class C {
                 constructor(

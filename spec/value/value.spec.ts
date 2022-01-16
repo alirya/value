@@ -1,9 +1,9 @@
-import Value from "../../dist/value/value";
-import ValueContainer from "../../dist/value";
+import Value from '../../dist/value/value';
+import ValueContainer from '../../dist/value';
 
-it("force console log", () => { spyOn(console, 'log').and.callThrough();});
+it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
-describe("compiler compatible", function() {
+describe('compiler compatible', function() {
 
     let value : ValueContainer<string> = {value:'string'};
 
@@ -11,7 +11,7 @@ describe("compiler compatible", function() {
 
 });
 
-it("result equal", function() {
+it('result equal', function() {
 
     let value : ValueContainer<string> = {value:'string'};
 

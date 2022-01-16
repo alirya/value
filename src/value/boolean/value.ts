@@ -1,5 +1,5 @@
-import ValueInterface from "../../value";
-import ValueObject from "../../boolean/value";
+import ValueInterface from '../../value';
+import ValueObject from '../../boolean/value';
 
 export default function Value<ValueType>(
     value : ValueInterface<unknown>,

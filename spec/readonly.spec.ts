@@ -1,9 +1,9 @@
-import Readonly from "../dist/readonly";
+import Readonly from '../dist/readonly';
 
-it("enable console log", () => spyOn(console, 'log').and.callThrough());
+it('enable console log', () => spyOn(console, 'log').and.callThrough());
 
 
-describe("constructor", function() {
+describe('constructor', function() {
 
     let standard = {value:1};
     let wrapped = new Readonly(standard);
@@ -12,7 +12,7 @@ describe("constructor", function() {
 });
 
 
-describe("set", function() {
+describe('set', function() {
 
     let standard = {value:1};
     let wrapped = new Readonly(standard);

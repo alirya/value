@@ -1,5 +1,5 @@
-import Value from "./value";
-import Infer from "./value/infer";
+import Value from './value';
+import Infer from './value/infer';
 
 /**
  * Readonly wrapper for {@link Value}

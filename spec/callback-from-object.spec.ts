@@ -1,12 +1,12 @@
-import CallbackFromObject from "../dist/callback-parameter";
-import Argument from "@dikac/t-function/argument/argument";
-import Callback from "@dikac/t-function/callback/callback";
+import CallbackFromObject from '../dist/callback-parameter';
+import Argument from '@dikac/t-function/argument/argument';
+import Callback from '@dikac/t-function/callback/callback';
 
 
-it("force console log", () => { spyOn(console, 'log').and.callThrough();});
+it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
 
-describe("basic", function() {
+describe('basic', function() {
 
     let fn = function (number : number) {
 
@@ -42,7 +42,3 @@ describe("basic", function() {
 
     });
 });
-
-
-
-
