@@ -9,6 +9,9 @@ describe('compiler compatible', function() {
 
     let result : string = Value(value);
 
+    it('result equal', function() {
+        expect(true).toBe(true);
+    });
 });
 
 it('result equal', function() {

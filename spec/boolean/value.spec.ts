@@ -14,6 +14,9 @@ describe(`compiler compatible`,function() {
         let value : Value = data;
     }
 
+    it('result equal', function() {
+        expect(true).toBe(true);
+    });
 });
 
 describe('unvalidated value', function() {
