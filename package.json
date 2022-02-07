@@ -3,6 +3,7 @@
   "version": "0.15.0",
   "description": "Typescript value",
   "dependencies": {
+    "tslib": "^2.3.1",
     "@alirya/function": "0.15.0",
     "@alirya/object": "0.37.1",
     "@alirya/validatable": "0.20.0",
