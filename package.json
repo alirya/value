@@ -4,11 +4,11 @@
   "description": "Typescript value",
   "dependencies": {
     "tslib": "^2.3.1",
-    "@alirya/function": "0.15.0",
-    "@alirya/object": "0.37.1",
-    "@alirya/validatable": "0.20.0",
-    "@alirya/validator": "0.19.1",
-    "@alirya/message": "0.12.0",
+    "@alirya/function": "^0.15.0",
+    "@alirya/object": "^0.37.1",
+    "@alirya/validatable": "^0.20.0",
+    "@alirya/validator": "^0.19.1",
+    "@alirya/message": "^0.12.0",
     "ts-toolbelt": "^9.6.0"
   },
   "devDependencies": {
