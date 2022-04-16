@@ -1,13 +1,13 @@
 {
   "name": "@alirya/value",
-  "version": "0.15.0",
+  "version": "0.15.1",
   "description": "Typescript value",
   "dependencies": {
-    "@alirya/function": "^0.15.0",
-    "@alirya/object": "^0.37.2",
-    "@alirya/validatable": "^0.20.0",
-    "@alirya/validator": "^0.19.2",
-    "@alirya/message": "^0.12.0",
+    "@alirya/function": "^0.16.0",
+    "@alirya/object": "^0.37.3",
+    "@alirya/validatable": "^0.20.1",
+    "@alirya/validator": "^0.19.3",
+    "@alirya/message": "^0.12.1",
     "ts-toolbelt": "^9.6.0"
   },
   "homepage": "https://github.com/alirya/value",
