@@ -1,6 +1,6 @@
 import Guard from '../boolean/value';
-import Callback from '@alirya/function/assert/callback-parameters';
-import StringError from './throwable/value-parameters';
+import {CallbackParameters} from '@alirya/function/assert/callback';
+import StringError from './throwable/value';
 import ValueInterface from '../value';
 
 
@@ -14,8 +14,8 @@ import ValueInterface from '../value';
  */
 export default function Value(
     value : object,
-    error : (value:object)=>Error = StringError
+    error : (value:object)=>Error = StringError.Parameters
 ) : asserts value is ValueInterface {
 
-    Callback(value, Guard, error);
+    CallbackParameters(value, Guard, error);
 }

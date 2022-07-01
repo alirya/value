@@ -1,4 +1,4 @@
-import CallbackFromObject from '../dist/callback-parameter';
+import {CallbackParameter} from '../dist/callback';
 import Argument from '@alirya/function/argument/argument';
 import Callback from '@alirya/function/callback/callback';
 
@@ -14,7 +14,7 @@ describe('basic', function() {
     };
 
     let argument : Callback<(n:number)=>number> & Argument<[number]> = {callback:fn, argument:[1]};
-    let callback = new CallbackFromObject(argument);
+    let callback = new CallbackParameter(argument);
 
     it('validate initial data', function () {
 
