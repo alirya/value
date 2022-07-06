@@ -1,4 +1,4 @@
-import Value from '../../dist/assert/value';
+import Value from '../../dist/assert/value.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

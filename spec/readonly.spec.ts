@@ -1,4 +1,4 @@
-import Readonly from '../dist/readonly';
+import Readonly from '../dist/readonly.js';
 
 it('enable console log', () => spyOn(console, 'log').and.callThrough());
 

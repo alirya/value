@@ -1,6 +1,6 @@
-import ValueContainer from '../../../dist/value';
-import Value from '../../../dist/value/boolean/value';
-import Object_ from '@alirya/object/boolean/object';
+import ValueContainer from '../../../dist/value.js';
+import Value from '../../../dist/value/boolean/value.js';
+import Object_ from '@alirya/object/boolean/object.js';
 
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});

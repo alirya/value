@@ -1,5 +1,5 @@
-import Value from '../../dist/value/value';
-import ValueContainer from '../../dist/value';
+import Value from '../../dist/value/value.js';
+import ValueContainer from '../../dist/value.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 

@@ -1,8 +1,8 @@
-import Callable from '@alirya/function/callable';
-import Value from './value';
-import Argument from '@alirya/function/argument/argument';
-import {CallParameter} from '@alirya/function/argument/value/call';
-import Callback from '@alirya/function/callback/callback';
+import Callable from '@alirya/function/callable.js';
+import Value from './value.js';
+import Argument from '@alirya/function/argument/argument.js';
+import {CallParameter} from '@alirya/function/argument/value/call.js';
+import Callback from '@alirya/function/callback/callback.js';
 
 export interface CallbackType<FunctionType extends Callable> extends Readonly<Value<ReturnType<FunctionType>>> {
 

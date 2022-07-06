@@ -1,4 +1,4 @@
-import Memoized from '../dist/memoize';
+import Memoized from '../dist/memoize.js';
 
 it('enable console log', () => spyOn(console, 'log').and.callThrough());
 

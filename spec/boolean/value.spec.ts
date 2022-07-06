@@ -1,5 +1,5 @@
-import Type from '../../dist/boolean/value';
-import Value from '../../dist/value';
+import Type from '../../dist/boolean/value.js';
+import Value from '../../dist/value.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 

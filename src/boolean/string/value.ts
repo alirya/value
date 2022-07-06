@@ -1,5 +1,5 @@
-import Value from '../../value';
-import Validatable from '@alirya/validatable/validatable';
+import Value from '../../value.js';
+import Validatable from '@alirya/validatable/validatable.js';
 
 export function ValueParameters(
     value : unknown,
