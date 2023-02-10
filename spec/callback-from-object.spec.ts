@@ -1,4 +1,4 @@
-import CallbackFromObject from '../dist/callback-parameter';
+import CallbackFromObject from '../dist/callback-parameter.js';
 import Argument from '@alirya/function/argument/argument';
 import Callback from '@alirya/function/callback/callback';
 
@@ -8,13 +8,13 @@ it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
 describe('basic', function() {
 
-    let fn = function (number : number) {
+    const fn = function (number : number) {
 
         return number + number;
     };
 
-    let argument : Callback<(n:number)=>number> & Argument<[number]> = {callback:fn, argument:[1]};
-    let callback = new CallbackFromObject(argument);
+    const argument : Callback<(n:number)=>number> & Argument<[number]> = {callback:fn, argument:[1]};
+    const callback = new CallbackFromObject(argument);
 
     it('validate initial data', function () {
 

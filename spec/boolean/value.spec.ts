@@ -1,17 +1,17 @@
-import Type from '../../dist/boolean/value';
+import Type from '../../dist/boolean/value.js';
 import Value from '../../dist/value';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
 describe(`compiler compatible`,function() {
 
-    let data : object = {null:null};
+    const data : object = {null:null};
 
     if(Type(data)) {
-        let value : Value = data;
+        const value : Value = data;
     } else {
         // @ts-expect-error
-        let value : Value = data;
+        const value : Value = data;
     }
 
     it('result equal', function() {
@@ -25,14 +25,14 @@ describe('unvalidated value', function() {
 
         it('string', () => {
 
-            let value = {value : 'string'};
+            const value = {value : 'string'};
             expect(Type(value)).toBe(true);
 
         });
 
         it('integer', () => {
 
-            let value = {value : 1};
+            const value = {value : 1};
             expect(Type(value)).toBe(true);
 
         });
@@ -42,14 +42,14 @@ describe('unvalidated value', function() {
 
         it('string', () => {
 
-            let value = {string:'string'};
+            const value = {string:'string'};
             expect(Type(value)).toBe(false);
 
         });
 
         it('integer', () => {
 
-            let value = {integer:1};
+            const value = {integer:1};
             expect(Type(value)).toBe(false);
 
         });
@@ -63,7 +63,7 @@ describe('validated value', function() {
 
         it('object', () => {
 
-            let value = {value :{}};
+            const value = {value :{}};
             expect(Type(value)).toBe(true);
         });
 
@@ -83,7 +83,7 @@ describe('validated value', function() {
 
         it('object', () => {
 
-            let value = {};
+            const value = {};
             expect(Type(value)).toBe(false);
         });
 

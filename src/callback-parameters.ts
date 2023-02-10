@@ -1,5 +1,5 @@
 import Callable from '@alirya/function/callable';
-import CallbackParameter from './callback-parameter';
+import CallbackParameter from './callback-parameter.js';
 
 export default class CallbackParameters<
     FunctionType extends Callable,

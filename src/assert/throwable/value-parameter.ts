@@ -1,7 +1,7 @@
 import Value from '../../value';
 import Message from '@alirya/message/message';
 import Dynamic from '@alirya/validator/message/function/validatable-parameter';
-import ValueParameters from './value-parameters';
+import ValueParameters from './value-parameters.js';
 
 export default function ValueParameter(
     {

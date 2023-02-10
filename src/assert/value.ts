@@ -1,6 +1,6 @@
-import Guard from '../boolean/value';
-import Callback from '@alirya/function/assert/callback-parameters';
-import StringError from './throwable/value-parameters';
+import Guard from '../boolean/value.js';
+import Callback from '@alirya/function/assert/callback-parameters.js';
+import StringError from './throwable/value-parameters.js';
 import ValueInterface from '../value';
 
 

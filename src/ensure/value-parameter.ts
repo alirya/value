@@ -1,6 +1,6 @@
 import ValueInterface from '../value';
 import Value from '../value';
-import ValueParameters from './value-parameters';
+import ValueParameters from './value-parameters.js';
 
 /**
  * return {@param value} is compatible with {@link ValueInterface}

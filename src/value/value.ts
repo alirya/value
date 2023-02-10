@@ -1,4 +1,4 @@
-import Infer from './infer';
+import Infer from './infer.js';
 import Value from '../value';
 
 /**

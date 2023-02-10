@@ -1,5 +1,5 @@
-import AssertString from '../assert/value';
-import ValueError from '../assert/throwable/value-parameters';
+import AssertString from '../assert/value.js';
+import ValueError from '../assert/throwable/value-parameters.js';
 import ValueInterface from '../value';
 
 /**

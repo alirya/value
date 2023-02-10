@@ -1,6 +1,6 @@
 import Value from './value';
 import Argument from '@alirya/function/argument/argument';
-import Call from '@alirya/function/argument/value/call-parameter';
+import Call from '@alirya/function/argument/value/call-parameter.js';
 import Callback from '@alirya/function/callback/callback';
 import Callable from '@alirya/function/callable';
 

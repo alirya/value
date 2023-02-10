@@ -1,5 +1,5 @@
-import ValueParameters from './value-parameters';
-import ValueParameter from './value-parameter';
+import ValueParameters from './value-parameters.js';
+import ValueParameter from './value-parameter.js';
 
 namespace Value {
 
