@@ -1,15 +1,15 @@
-import Value from '../../dist/assert/value';
+import Value from '../../dist/assert/value.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it(`compiler compatible`,function() {
 
-    let data : object = {};
+    const data : object = {};
 
     try {
         Value(data);
 
-        let value : unknown = data.value;
+        const value : unknown = data.value;
 
         fail('exception should thrown');
 

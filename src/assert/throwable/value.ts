@@ -1,8 +1,8 @@
-import ValueType from '../../boolean/string/value';
-import {CallbackParameters} from '@alirya/function/assert/throwable/callback';
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
-import Value from '../../value';
-import Message from '@alirya/message/message';
+import ValueType from '../../boolean/string/value.js';
+import {CallbackParameters} from '@alirya/function/assert/throwable/callback.js';
+import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import Value from '../../value.js';
+import Message from '@alirya/message/message.js';
 
 export function ValueParameters(
     value : unknown,

@@ -1,7 +1,7 @@
-import AssertString from '../assert/value';
-import ValueError from '../assert/throwable/value';
-import ValueInterface from '../value';
-import Value from '../value';
+import AssertString from '../assert/value.js';
+import ValueError from '../assert/throwable/value.js';
+import ValueInterface from '../value.js';
+import Value from '../value.js';
 
 /**
  * return {@param value} is compatible with {@link ValueInterface}
