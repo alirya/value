@@ -1,8 +1,8 @@
 import ValueType from '../../boolean/string/value.js';
-import {CallbackParameters} from '@alirya/function/assert/throwable/callback.js';
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import {CallbackParameters} from '@axiona/function/assert/throwable/callback.js';
+import {ValidatableParameters, ValidatableParameter} from '@axiona/validator/message/function/validatable.js';
 import Value from '../../value.js';
-import Message from '@alirya/message/message.js';
+import Message from '@axiona/message/message.js';
 
 export function ValueParameters(
     value : unknown,

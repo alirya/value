@@ -1,5 +1,5 @@
 import Guard from '../boolean/value.js';
-import {CallbackParameters} from '@alirya/function/assert/callback.js';
+import {CallbackParameters} from '@axiona/function/assert/callback.js';
 import StringError from './throwable/value.js';
 import ValueInterface from '../value.js';
 

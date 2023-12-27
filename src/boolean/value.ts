@@ -1,5 +1,5 @@
 import ValueInterface from '../value.js';
-import {ExistsParameters} from '@alirya/object/property/boolean/exists.js';
+import {ExistsParameters} from '@axiona/object/property/boolean/exists.js';
 
 /**
  * check if {@param value} is compatible with {@link ValueInterface}

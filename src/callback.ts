@@ -1,8 +1,8 @@
-import Callable from '@alirya/function/callable.js';
+import Callable from '@axiona/function/callable.js';
 import Value from './value.js';
-import Argument from '@alirya/function/argument/argument.js';
-import {CallParameter} from '@alirya/function/argument/value/call.js';
-import Callback from '@alirya/function/callback/callback.js';
+import Argument from '@axiona/function/argument/argument.js';
+import {CallParameter} from '@axiona/function/argument/value/call.js';
+import Callback from '@axiona/function/callback/callback.js';
 
 export type CallbackType<FunctionType extends Callable> = Readonly<Value<ReturnType<FunctionType>>>;
 

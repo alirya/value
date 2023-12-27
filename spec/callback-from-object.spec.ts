@@ -1,6 +1,6 @@
 import {CallbackParameter} from '../dist/callback.js';
-import Argument from '@alirya/function/argument/argument.js';
-import Callback from '@alirya/function/callback/callback.js';
+import Argument from '@axiona/function/argument/argument.js';
+import Callback from '@axiona/function/callback/callback.js';
 
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});

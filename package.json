@@ -1,5 +1,5 @@
 {
-  "name": "@alirya/value",
+  "name": "@axiona/value",
   "version": "0.16.1",
   "description": "Typescript value",
   "publishConfig": {
@@ -12,23 +12,24 @@
     "cache": false
   },
   "license": "Apache-2.0",
-  "homepage": "https://github.com/alirya/value",
+  "homepage": "https://github.com/axiona/value",
   "repository": {
     "type": "git",
-    "url": "https://github.com/alirya/value"
+    "url": "https://github.com/axiona/value"
   },
   "dependencies": {
     "tslib": "^2.5.0",
-    "@alirya/function": "^0.17.1",
-    "@alirya/object": "^0.38.1",
-    "@alirya/validatable": "^0.21.1",
-    "@alirya/validator": "^0.20.1",
-    "@alirya/message": "^0.13.1",
+    "@axiona/function": "^0.17.1",
+    "@axiona/object": "^0.38.1",
+    "@axiona/validatable": "^0.21.1",
+    "@axiona/validator": "^0.20.1",
+    "@axiona/message": "^0.13.1",
     "ts-toolbelt": "^9.6.0"
   },
   "devDependencies": {
     "@types/jasmine": "^3.10.2",
     "cpy-cli": "^3.1.1",
+    "mocha": "^10.2.0",
     "esm": "^3.2.25",
     "jasmine": "^4.5.0",
     "jasmine-ts-console-reporter": "^3.1.1",
